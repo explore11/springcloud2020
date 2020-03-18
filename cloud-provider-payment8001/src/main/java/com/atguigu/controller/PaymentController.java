@@ -15,8 +15,8 @@ public class PaymentController {
     @Resource
     private PaymentService paymentService;
 
-    @PostMapping("/create")   //TODO  暂时不加@RequestParam
-    public CommonResult creatPayment(Payment payment) {
+    @PostMapping("/create")
+    public CommonResult creatPayment(@RequestBody Payment payment) {
         int num = paymentService.creatPayment(payment);
         log.info("****** 保存  creatPayment " + num);
         if (num > 0) {
