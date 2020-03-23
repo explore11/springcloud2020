@@ -20,4 +20,9 @@ public class OrderController {
     public CommonResult getPayment(@PathVariable("id") Long id) {
         return orderService.getPayment(id);
     }
+
+    @GetMapping("/consumer/payment/timeOut")
+    public String timeOut() {
+        return orderService.timeOut();
+    }
 }

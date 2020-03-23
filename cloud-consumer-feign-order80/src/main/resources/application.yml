@@ -13,3 +13,12 @@ eureka:
   instance:
     instance-id: order80
     prefer-ip-address: true
+
+ribbon:
+  ReadTimeout:  5000     #建立连接后从服务器读取资源的时间
+  ConnectTimeout: 5000   #服务器的提供者和调用者建立连接的时间
+
+
+logging:
+  level:
+    com.atguigu.service.OrderService: debug

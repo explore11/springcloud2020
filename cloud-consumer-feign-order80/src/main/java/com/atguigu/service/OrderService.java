@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(value = "CLOUD-PAYMENT-SERVICE")
 public interface OrderService {
-    @GetMapping("/consumer/payment/get/{id}")
+    @GetMapping("/payment/get/{id}")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id);
+
+    @GetMapping("/payment/timeOut")
+    public String timeOut();
 }
