@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud-payment-service
+    name: cloud-payment-com.atguigu.service
   cloud:
     zookeeper:
       connect-string: 92.168.1.106:2181

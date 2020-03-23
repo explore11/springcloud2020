@@ -2,7 +2,7 @@ server:
   port: 8002
 spring:
   application:
-    name: cloud-payment-service
+    name: cloud-payment-com.atguigu.service
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root

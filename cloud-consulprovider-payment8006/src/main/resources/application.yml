@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: consul-provider-service
+    name: consul-provider-com.atguigu.service
   cloud:
     consul:
       port: 8500
