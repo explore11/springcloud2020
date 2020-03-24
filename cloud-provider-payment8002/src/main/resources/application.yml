@@ -2,7 +2,7 @@ server:
   port: 8002
 spring:
   application:
-    name: cloud-payment-com.atguigu.service
+    name: cloud-payment-service
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
@@ -18,7 +18,8 @@ eureka:
   client:
     register-with-eureka: true
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+#      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/
     fetch-registry: true
   instance:
     instance-id: payment8002
