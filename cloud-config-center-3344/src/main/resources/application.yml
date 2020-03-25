@@ -1,0 +1,24 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/explore11/cloud-config.git
+          skipSslValidation: true
+          search-paths:
+            - cloud-config
+          default-label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    ip-address: cloud-config
+    prefer-ip-address: true
