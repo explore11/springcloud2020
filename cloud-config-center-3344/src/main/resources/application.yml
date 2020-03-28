@@ -8,8 +8,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/explore11/cloud-config.git
-          skipSslValidation: true
+#          uri: https://github.com/explore11/cloud-config.git   使用这种地址的 需要ssl验证  可以使用skipSslValidation 跳过验证
+#          skipSslValidation: true
+          uri: git@github.com:explore11/cloud-config.git  #使用的是ssh的验证方式
           search-paths:
             - cloud-config
           default-label: master
