@@ -34,6 +34,8 @@ eureka:
     prefer-ip-address: true
 
 # 利用消息总线实现自动刷新  配置完成后运维人员 执行curl -X POST "http://localhost:3344/actuator/bus-refresh"
+# 动态刷新的定点通知 公式：http://localhost:配置中心的端口号/actuator/bus-refresh/{destination}
+# eg: 只通知3355   curl -X POST  "http://localhost:3344/actuator/bus-refresh/config-client:3355"   服务名字:端口号
 management:
   endpoints:
     web:
