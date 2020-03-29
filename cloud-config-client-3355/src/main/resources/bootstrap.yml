@@ -18,4 +18,8 @@ eureka:
 #  instance:
 #    prefer-ip-address: true
 #    ip-address: config-client
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
