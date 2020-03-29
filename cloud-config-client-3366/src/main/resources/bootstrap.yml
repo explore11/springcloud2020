@@ -1,5 +1,6 @@
 server:
-  port: 3355
+  port: 3366
+
 spring:
   application:
     name: config-client
@@ -21,11 +22,10 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka
     fetch-registry: false
     register-with-eureka: true
-#  instance:
-#    prefer-ip-address: true
-#    ip-address: config-client
+
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+
