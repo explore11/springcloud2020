@@ -27,6 +27,13 @@ public class OrderController {
     //    public static final String PAYMENT_URL = "http://localhost:8001";
     public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
 
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin() {
+        String result = restTemplate.getForObject("http://localhost:8001" + "/payment/zipkin/", String.class);
+
+        return result;
+    }
+
 
     @GetMapping("/consumer/payment/lb")
     public String getPaymentLb() {
@@ -36,7 +43,7 @@ public class OrderController {
         }
         ServiceInstance serviceInstance = myLB.getServiceInstance(instances);
         URI uri = serviceInstance.getUri();
-        return restTemplate.getForObject(uri+"/payment/lb",String.class);
+        return restTemplate.getForObject(uri + "/payment/lb", String.class);
     }
 
 
