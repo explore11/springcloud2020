@@ -17,6 +17,9 @@ import java.util.List;
 @RestController
 @Slf4j
 public class OrderController {
+
+
+    //SpringCloud从F版起已不需要自己构建Zipkin server了，只需要调用jar包即可   java -jar zipkin-server-2.12.9.exec.jar
     @Resource
     private RestTemplate restTemplate;
     @Resource
